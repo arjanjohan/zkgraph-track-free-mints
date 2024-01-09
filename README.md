@@ -1,4 +1,6 @@
-# zkGraph uniswrapperice template
+# zkGraph free mint nft
+
+This zkGraph will monitor events on-chain to track all nft's that are minted for free. This zkGraph is intdented to be combined by graphs that track holders of certain collections. By combining these graphs, it will be possible to track free mints that are specific for holders of certain collections. 
 
 ## Usage CLI
 
