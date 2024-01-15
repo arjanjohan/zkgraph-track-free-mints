@@ -7,14 +7,14 @@ var null_address = Bytes.fromHexString(
 var transfer_event = Bytes.fromHexString(
   "0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef"
 );
-var free = Bytes.fromByteArray("Value: 0");
+
+var free = Bytes.fromHexString("Value: 0");
 
 export function handleBlocks(blocks: Block[]): Bytes {
   let events: Event[] = blocks[0].events;
 
   // Check all new mints events (transfer from null address)
   // Check if value is 0 to see if it is a free mint
-
   let free_mint_collections: ByteArray = ByteArray.empty();
   for (let i = events.length - 1; i >= 0; i--) {
     if (

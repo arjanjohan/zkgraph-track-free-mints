@@ -1,13 +1,14 @@
 specVersion: 0.0.2
 apiVersion: 0.0.2
 name: free_mint
-description: "This zkGraph will check the onchain activity of milady holders, to see if they are receiving any free mints "
+description: "This zkGraph will check the onchain activity of nft holders, to see if they are receiving any free mints "
 repository: https://github.com/arjanjohan/zkgraph-hacked-bayc
 dataSources:
   - kind: ethereum
     network: mainnet
     event:
-      - events: 
+      - address: "0x0000000000000000000000000000000000000001"
+        events: 
           - "Transfer(address,address,uint256)"
 
 mapping:
