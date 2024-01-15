@@ -22,7 +22,7 @@ export function handleBlocks(blocks: Block[]): Bytes {
       events[i].esig == transfer_event && 
       events[i].data == free
       ) {
-      free_mint_collections.concat(events[i].address);
+        free_mint_collections = free_mint_collections.concat(events[i].address);
     }
   }
   let state = Bytes.fromByteArray(free_mint_collections);
